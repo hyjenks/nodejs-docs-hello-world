@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        "strict": true,
+        "moduleResolution": "Node",
+        "module": "commonjs",
+        "target": "ES6",
+        "baseUrl": "./projects",
+        "lib": [
+            "ES2020"
+        ]
+    }
+}

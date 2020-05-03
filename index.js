@@ -1,11 +1,11 @@
-const http = require('http');
-
-const server = http.createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello World!");
-});
-
-const port = process.env.PORT || 1337;
-server.listen(port);
-
-console.log("Server running at http://localhost:%d", port);
+console.log(`application is in ${process.env.NODE_ENV} mode`);
+let packageName = process.env.PACKAGE_NAME;
+for (let i = 0; i < process.argv.length; i++) {
+    if (process.argv[i] === '-p' || process.argv[i] === '--package') {
+        packageName = process.argv[i + 1];
+    }
+}
+if (!packageName)
+    throw new Error('You must specify an entry point using "--package <name>" or setting "process.env.PACKAGE_NAME"');
+console.log(`starting \`${packageName}\``);
+require(`./packages/${packageName}`);
