@@ -1,0 +1,6 @@
+{
+  "name": "websvr",
+  "dependencies": {
+    "@company/versionlib": "workspace:*"
+  }
+}
