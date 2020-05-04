@@ -10,10 +10,7 @@
     "license": "MIT",
     "author": "Microsoft",
     "scripts": {
-        "start:prod": "node ./.yarn/releases/yarn-berry.js node ./index1.js",
-        "start": "node index0",
-        "start1": "yarn node index",
-        "start2": "node ./.yarn/releases/yarn-berry.js node ./index.js"
+        "start": "yarn node index1"
     },
     "workspaces": [
         "packages/**"
